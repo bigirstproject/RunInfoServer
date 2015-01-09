@@ -14,6 +14,7 @@ import com.duowan.runinfo.service.RunInfoUitl;
 public class MainActivity extends Activity {
 	private Button mStartService;
 	private Button mStopService;
+	private Button mRegisterService;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		mStartService = (Button) findViewById(R.id.startService);
 		mStopService = (Button) findViewById(R.id.stopService);
+		mRegisterService = (Button) findViewById(R.id.registerService);
 		mStartService.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -49,5 +51,15 @@ public class MainActivity extends Activity {
 
 			}
 		});
+		mRegisterService.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this,
+						BatterActivity.class));
+
+			}
+		});
 	}
+
 }

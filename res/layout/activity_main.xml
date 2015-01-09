@@ -18,5 +18,10 @@
         android:layout_height="wrap_content"
         android:text="stopService" />
     
- 
+        <Button
+            android:id="@+id/registerService"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="registerService" />
+
 </LinearLayout>
